@@ -10,3 +10,9 @@ console.log("오늘 : ", timestampToDate.toLocaleString());
 
 const timestampToInit = new Date(1);
 console.log("타임스탬프 초기날짜 : ", timestampToInit);
+
+const date1 = new Date();
+const timestamp = date1.getTime();
+console.log("타임스탬프 : ", timestamp);
+const timestampdate = new Date(timestamp);
+console.log("타임스탬프 날짜로 다시 변경 : ", timestampdate.toLocaleString());
