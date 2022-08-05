@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="example.js"></script>
+    <link rel="stylesheet" href="example.css">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+                $("#list").click(function() {
+                $.getJSON("product.json", function(data) {
+                    $.each(data, function(key, value) {
+                        $("#list").append("<h2>" + value.name + "<br>" + value.product + "==>" + value.price + "</h2> <br> <address>" + value.address + "</address>");
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="main">
+        <ul id="sub">
+            <li>
+                <label for="price">정상 가격</label>
+                <input type="text" id="price">원
+            </li>
+            <li>
+                <label for="sale">할인율</label>
+                <input type="text" id="sale">%
+            </li>
+            <li>
+                <button onclick="saleEvnet();">할인가 계산</button>
+            </li>
+        </ul>
+        <div id="result">
+
+        </div>
+        <div id="text">
+            <button type="button" id="list">정보보기</button>
+        </div>
+    </div>
+</body>
+</html>

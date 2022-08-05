@@ -1,0 +1,20 @@
+#main, #sub {
+    margin: 200px auto;
+    text-align: center;
+}
+#sub {
+    margin: 0 auto;
+    list-style: none;
+    border: 2px solid blue;
+    width: 500px;
+    height: 80px;
+    padding: 30px;
+}
+#result {
+    margin:  30px auto;
+    border: 2px solid yellow;
+    width: 470px;
+    height: 50px;
+    font-weight: bold;
+
+}
